@@ -1,8 +1,13 @@
-from problems import pe2
+import timeit
+
+from problems import pe8
 
 
 def main():
-    print pe2.run()
+    start = timeit.default_timer()
+    print(pe8.run())
+    end = timeit.default_timer()
+    print("{} Seconds".format(format(end - start, '.4g')))
 
 
 if __name__ == "__main__":
