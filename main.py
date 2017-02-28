@@ -1,11 +1,11 @@
 import timeit
 
-from problems import pe8
+from problems import pe21
 
 
 def main():
     start = timeit.default_timer()
-    print(pe8.run())
+    print(pe21.run())
     end = timeit.default_timer()
     print("{} Seconds".format(format(end - start, '.4g')))
 
