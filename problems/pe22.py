@@ -14,12 +14,7 @@ def run():
     lines = text_file.read().split(',')
     text_file.close()
 
-    sum = 0
-
-    for idx, line in enumerate(sorted(lines)):
-        sum += (idx + 1) * word_to_number(line)
-
-    return sum
+    return sum((idx + 1) * word_to_number(line) for idx, line in enumerate(sorted(lines)))
 
 
 def word_to_number(word):
