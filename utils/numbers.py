@@ -13,3 +13,23 @@ def is_perfect_number(num, factors=None):
         factors = get_factors(num);
 
     return sum(factors) + 1 == num
+
+
+def get_fibonacci(num):
+    if num == 1 or num == 2:
+        return 1
+
+    if num == 3:
+        return 2
+
+    f1 = 1
+    f2 = 2
+    num -= 3
+
+    while num > 0:
+        hold = f2
+        f2 = hold + f1
+        f1 = hold
+        num -= 1
+
+    return f2
